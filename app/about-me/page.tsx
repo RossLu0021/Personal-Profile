@@ -75,15 +75,15 @@ export default function AboutMePage() {
 
         <div className="flex pt-10 justify-between">
           <div className="relative w-full h-60 md:h-72">
-            <Image src="/blank-profile.png" width={450} height={550} alt="…" />
+            <Image src="/blank-profile.png" width={400} height={500} alt="…" />
             Image 1
           </div>
           <div className="relative w-full h-60 md:h-72">
-            <Image src="/blank-profile.png" width={450} height={550} alt="…" />
+            <Image src="/blank-profile.png" width={400} height={500} alt="…" />
             Image 2
           </div>
           <div className="relative w-full h-60 md:h-72">
-            <Image src="/blank-profile.png" width={450} height={550} alt="…" />
+            <Image src="/blank-profile.png" width={400} height={500} alt="…" />
             Image 3
           </div>
         </div>
