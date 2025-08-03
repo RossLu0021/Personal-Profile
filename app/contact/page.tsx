@@ -50,7 +50,9 @@ export default function ContactPage() {
         <Navbar className="bg-black" />
       </div>
       <div className="min-h-screen flex flex-col items-center pt-24 px-4">
-        <h1 className="text-4xl font-bold mb-8 text-center">Contact</h1>
+        <h1 className="text-4xl font-bold mb-8 text-center  sm:text-4xl lg:text-5xl">
+          Contact
+        </h1>
 
         <div className="w-full max-w-lg">
           <Form {...form}>
