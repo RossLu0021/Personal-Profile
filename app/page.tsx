@@ -5,6 +5,12 @@ import Navbar from '@/components/me/navbar';
 import Typewriter from '@/components/me/typewriter';
 import Image from 'next/image';
 
+/**
+ * HomePage component.
+ * It features a background image, a navigation bar, and a typewriter effect.
+ *
+ * @returns {JSX.Element} The home page component.
+ */
 export default function HomePage() {
   return (
     <>
@@ -12,15 +18,15 @@ export default function HomePage() {
         <Image
           src="/pixels.jpg"
           alt="Background animation"
-          fill // Makes the image absolutely fill the parent (like position: absolute; top: 0; left:0; width:100%; height:100%)
+          fill
+          sizes="100vw"
           className="absolute inset-0 w-full h-full object-cover object-center z-0"
-          priority // Loads the image eagerly,
+          priority
         />
 
         <div className="relative z-10 flex flex-col h-full min-h-screen">
           <Navbar />
 
-          {/* Typewriter centered hopefully */}
           <div className="flex-1 flex flex-col items-center justify-center">
             <Typewriter text="Welcome To My website" speed={70} delay={2000} />
           </div>

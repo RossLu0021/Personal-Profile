@@ -5,88 +5,126 @@ export default function AboutMePage() {
   return (
     <>
       <Navbar className="bg-gray-400" />
-      <main className="pt-8 pb-4 sm:px-8 md:px-16 lg:px-24 xl:px-32">
-        <h1 className="text-center my-12 text-3xl sm:text-4xl lg:text-5xl font-bold mb-2">
+      <main className="pt-20 pb-12 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 max-w-7xl mx-auto">
+        <h1 className="text-center mb-12 text-4xl sm:text-5xl font-bold text-gray-800">
           About Me
         </h1>
 
-        <div className="flex flex-col md:flex-row items-center md:space-x-6 space-y-6 md:space-y-0">
-          <Image
-            src="/blank-profile.png"
-            width={300}
-            height={300}
-            alt="Picture of the author"
-            className="rounded-full object-cover"
-          />
-          <p className="text-justify">
-            My name is Royal and I’m new to this. I’m trying my best and
-            improving every day and that’s what matters. Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit. Sed arcu ex, accumsan vel mauris
-            id, sagittis pellentesque orci. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Quisque in semper ipsum. Praesent at
-            diam eget enim aliquet posuere non et leo. Sed id mi lectus.
-            Phasellus vestibulum lectus rutrum tincidunt feugiat. Vestibulum
-            dictum ligula sed nunc consectetur, sit amet commodo sem ornare.
-            Donec iaculis, eros vel pharetra vestibulum, mauris lacus
-            condimentum odio, nec mattis mi odio sed ex. Quisque quis justo
-            congue, tempus mauris a, congue dui. Proin facilisis nulla nibh, non
-            condimentum velit auctor non. Sed egestas, quam sit amet condimentum
-            commodo, ipsum felis ultrices neque, ac commodo dolor sem eget
-            dolor. Sed luctus non nulla non sagittis. Quisque rhoncus nunc non
-            mi volutpat posuere. Etiam sit amet tempus eros. Donec egestas
-            libero sit amet arcu faucibus, at cursus est vehicula. Fusce ligula
-            lectus, semper vel est ut, euismod maximus dui.
-          </p>
+        {/* Bio */}
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-8 mb-16">
+          <div className="relative w-48 h-48 sm:w-64 sm:h-64 flex-shrink-0">
+            <Image
+              src="/blank-profile.png"
+              alt="Portrait of Lughan Ross"
+              fill
+              className="rounded-full object-cover shadow-lg border-4 border-white"
+              sizes="(min-width: 640px) 256px, 192px"
+              priority
+            />
+          </div>
+          <div className="flex-1 space-y-4 text-lg text-gray-700 leading-relaxed">
+            <p>
+              Hello! I&apos;m <strong>Lughan Ross</strong>, a passionate
+              software engineer dedicated to building intuitive and performant
+              web applications. With a strong foundation in backend development,
+              I love turning complex problems into elegant solutions.
+            </p>
+            <p>
+              My journey in tech has been driven by curiosity and a desire to
+              create. Whether it&apos;s crafting someone no one will use or
+              optimizing backend logic, I approach every project with enthusiasm
+              and attention to detail.
+            </p>
+          </div>
         </div>
 
-        <div>
-          <p className="pt-10 text-justify">
-            Cras ullamcorper suscipit nunc, sit amet pharetra leo pellentesque
-            et. Aenean a euismod orci, eu suscipit purus. Proin mauris nisl,
-            auctor vel nisl a, blandit hendrerit odio. Curabitur tristique velit
-            vel diam porta sollicitudin. Sed vel posuere tellus. Suspendisse id
-            iaculis orci. Pellentesque id lorem justo. Cras tincidunt posuere
-            arcu, quis luctus lectus pulvinar sed. Curabitur fringilla accumsan
-            tristique.
-          </p>
-        </div>
-        <div>
-          <p className="pt-10 text-justify">
-            CIn aliquam sapien sed imperdiet cursus. Duis non ipsum in odio
-            rutrum volutpat. Curabitur consectetur scelerisque lacus eget
-            laoreet. Duis accumsan augue quis massa placerat mattis. Nam vel
-            pellentesque enim, eget luctus felis. Maecenas molestie sit amet leo
-            eget volutpat. Fusce porta erat a augue mollis bibendum. Fusce purus
-            risus, sollicitudin sed nisl ut, euismod vestibulum massa. Donec sit
-            amet aliquet nisi, in posuere orci. Nullam gravida tortor at
-            elementum rutrum.
-          </p>
-        </div>
-        <div>
-          <p className="pt-10 text-justify">
-            Curabitur quis arcu justo. Nam in elementum urna, sit amet blandit
-            quam. Quisque volutpat erat in libero suscipit, quis rutrum ipsum
-            pulvinar. Phasellus mattis arcu eget tortor faucibus, tempus maximus
-            ipsum faucibus. Quisque condimentum mauris vel sodales hendrerit.
-            Nam elit dui, aliquet eu scelerisque nec, porta vel nisl. Integer
-            dapibus lacinia ex. Aliquam erat volutpat.
-          </p>
-        </div>
+        {/* Skills */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold mb-8 text-gray-800 border-b pb-2">
+            Skills
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {[
+              'React',
+              'Next.js',
+              'Ruby on Rails',
+              'TypeScript',
+              'Java',
+              'JavaScript',
+              'Tailwind CSS',
+              'Node.js',
+              'Git',
+              'SQL',
+              'HTML5',
+              'CSS',
+              'REST APIs',
+            ].map((skill) => (
+              <div
+                key={skill}
+                className="bg-white p-4 rounded-lg shadow-sm border border-gray-200 text-center font-medium text-gray-700 hover:shadow-md transition-shadow"
+              >
+                {skill}
+              </div>
+            ))}
+          </div>
+        </section>
 
-        <div className="flex pt-10 justify-between">
-          <div className="relative w-full h-60 md:h-72">
-            <Image src="/blank-profile.png" width={400} height={500} alt="…" />
-            Image 1
+        {/* Experience */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold mb-8 text-gray-800 border-b pb-2">
+            Experience
+          </h2>
+          <div className="space-y-8">
+            {/* Experience 1 */}
+            <div className="relative pl-8 border-l-2 border-gray-300">
+              <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-500"></div>
+              <h3 className="text-xl font-bold text-gray-800">
+                Software Engineer Intern
+              </h3>
+              <p className="text-gray-600 mb-2">
+                Mastercard | June 2025 - August 2025
+              </p>
+              <p className="text-gray-700">
+                Developing scalable web applications using Next.js and
+                TypeScript. Collaborating with cross-functional teams to deliver
+                high-quality features.
+              </p>
+            </div>
+
+            {/* Experience 2 */}
+            <div className="relative pl-8 border-l-2 border-gray-300">
+              <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gray-400"></div>
+              <h3 className="text-xl font-bold text-gray-800">
+                Student Developer
+              </h3>
+              <p className="text-gray-600 mb-2">
+                Ohio State University | 2024 - 2025
+              </p>
+              <p className="text-gray-700">
+                Assisted in the development of websites. Implemented responsive
+                websites and worked with mixed teams to enhance user experience.
+              </p>
+            </div>
           </div>
-          <div className="relative w-full h-60 md:h-72">
-            <Image src="/blank-profile.png" width={400} height={500} alt="…" />
-            Image 2
+        </section>
+
+        {/* Education */}
+        <section>
+          <h2 className="text-3xl font-bold mb-8 text-gray-800 border-b pb-2">
+            Education
+          </h2>
+          <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+            <h3 className="text-xl font-bold text-gray-800">
+              Bachelor of Science in Computer Science
+            </h3>
+            <p className="text-gray-600">
+              The Ohio State University | 2021 - 2025
+            </p>
+            <p className="text-gray-700 mt-2">
+              Focus on Software Engineering and Data Structures. Graduated.
+            </p>
           </div>
-          <div className="relative w-full h-60 md:h-72">
-            <Image src="/blank-profile.png" width={400} height={500} alt="…" />
-            Image 3
-          </div>
-        </div>
+        </section>
       </main>
     </>
   );

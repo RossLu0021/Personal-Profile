@@ -15,6 +15,13 @@ interface NavbarProps {
   className?: string;
 }
 
+/**
+ * Navbar component that provides navigation.
+ * It changes background color on scroll. because why not.
+ *
+ * @param {NavbarProps} props - The component props.
+ * @returns {JSX.Element} The navbar component.
+ */
 export default function Navbar({ className = '' }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

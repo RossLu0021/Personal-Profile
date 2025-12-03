@@ -2,10 +2,16 @@ import React, { useState, useEffect } from 'react';
 
 interface TypewriterProps {
   text: string;
-  speed?: number; // ms per character
-  delay?: number; // ms after finishing before reset
+  speed?: number;
+  delay?: number;
 }
 
+/**
+ * Typewriter component that simulates a typing effect.
+ *
+ * @param {TypewriterProps} props - The component props.
+ * @returns {JSX.Element} The typewriter component.
+ */
 const Typewriter: React.FC<TypewriterProps> = ({
   text,
   speed = 80,
