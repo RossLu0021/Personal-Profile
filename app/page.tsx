@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from '@/components/me/navbar';
+import Typewriter from '@/components/me/typewriter';
 
 type SectionTheme = 'dark' | 'light';
 
@@ -123,9 +124,18 @@ export default function HomePage() {
               <h1 className="text-4xl font-semibold tracking-tight md:text-6xl">
                 {section.title}
               </h1>
-              <p className="max-w-2xl text-base md:text-xl">
-                {section.subtitle}
-              </p>
+              {section.id === 'hero' ? (
+                <Typewriter
+                  text={section.subtitle}
+                  speed={55}
+                  delay={2200}
+                  className="max-w-2xl text-base md:text-xl"
+                />
+              ) : (
+                <p className="max-w-2xl text-base md:text-xl">
+                  {section.subtitle}
+                </p>
+              )}
 
               <div className="mt-2 flex w-full max-w-md flex-col gap-3 sm:flex-row">
                 {renderCta(section.primary, isDark, true)}
