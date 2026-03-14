@@ -79,15 +79,15 @@ export default function AboutMePage() {
             <div className="relative pl-8 border-l-2 border-gray-300">
               <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-500"></div>
               <h3 className="text-xl font-bold text-gray-800">
-                Software Engineer Intern
+                Software Engineer
               </h3>
               <p className="text-gray-600 mb-2">
-                Mastercard | June 2025 - August 2025
+                Mastercard | August 2025 - Present
               </p>
               <p className="text-gray-700">
                 Developing scalable web applications using Next.js and
-                TypeScript. Collaborating with cross-functional teams to deliver
-                high-quality features.
+                TypeScript as a full-time software engineer. Collaborating with
+                cross-functional teams to deliver high-quality features.
               </p>
             </div>
 
