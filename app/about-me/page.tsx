@@ -79,19 +79,35 @@ export default function AboutMePage() {
             <div className="relative pl-8 border-l-2 border-gray-300">
               <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-500"></div>
               <h3 className="text-xl font-bold text-gray-800">
+                Software Engineer
+              </h3>
+              <p className="text-gray-600 mb-2">
+                Mastercard | Jan 2026 - Present
+              </p>
+              <p className="text-gray-700">
+                Working full-time as a software engineer, building scalable web
+                applications and partnering with cross-functional teams to ship
+                reliable, high-quality features.
+              </p>
+            </div>
+
+            {/* Experience 2 */}
+            <div className="relative pl-8 border-l-2 border-gray-300">
+              <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-indigo-400"></div>
+              <h3 className="text-xl font-bold text-gray-800">
                 Software Engineer Intern
               </h3>
               <p className="text-gray-600 mb-2">
                 Mastercard | June 2025 - August 2025
               </p>
               <p className="text-gray-700">
-                Developing scalable web applications using Next.js and
-                TypeScript. Collaborating with cross-functional teams to deliver
-                high-quality features.
+                Contributed to internal web tooling and product features using
+                modern frontend technologies while collaborating closely with
+                engineers and product stakeholders.
               </p>
             </div>
 
-            {/* Experience 2 */}
+            {/* Experience 3 */}
             <div className="relative pl-8 border-l-2 border-gray-300">
               <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gray-400"></div>
               <h3 className="text-xl font-bold text-gray-800">

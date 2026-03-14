@@ -1,50 +1,44 @@
-import React, { useState, useEffect } from 'react';
+'use client';
+
+import { useEffect, useState } from 'react';
 
 interface TypewriterProps {
   text: string;
   speed?: number;
   delay?: number;
+  className?: string;
 }
 
-/**
- * Typewriter component that simulates a typing effect.
- *
- * @param {TypewriterProps} props - The component props.
- * @returns {JSX.Element} The typewriter component.
- */
-const Typewriter: React.FC<TypewriterProps> = ({
+export default function Typewriter({
   text,
   speed = 80,
   delay = 2000,
-}) => {
+  className = '',
+}: TypewriterProps) {
   const [displayed, setDisplayed] = useState('');
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    let timeout: ReturnType<typeof setTimeout>;
-
-    if (index < text.length) {
-      timeout = setTimeout(() => {
-        setDisplayed(text.slice(0, index + 1));
-        setIndex(index + 1);
-      }, speed);
-    } else {
-      // Pause, then reset for looping
-      timeout = setTimeout(() => {
-        setDisplayed('');
-        setIndex(0);
-      }, delay);
-    }
+    const timeout =
+      index < text.length
+        ? setTimeout(() => {
+            setDisplayed(text.slice(0, index + 1));
+            setIndex(index + 1);
+          }, speed)
+        : setTimeout(() => {
+            setDisplayed('');
+            setIndex(0);
+          }, delay);
 
     return () => clearTimeout(timeout);
-  }, [index, text, speed, delay]);
+  }, [delay, index, speed, text]);
 
   return (
-    <span className="font-mono text-white text-4xl">
+    <span className={className} aria-live="polite">
       {displayed}
-      <span className="animate-pulse">|</span>
+      <span className="animate-pulse" aria-hidden="true">
+        |
+      </span>
     </span>
   );
-};
-
-export default Typewriter;
+}
